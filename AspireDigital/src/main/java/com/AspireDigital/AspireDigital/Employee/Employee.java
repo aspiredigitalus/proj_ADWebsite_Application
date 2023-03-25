@@ -29,9 +29,14 @@ public class Employee {
     @Column(name="middle_init")
     private String middleInit;
 
+    @Column(name="region")
+    private String region;
+
     @Column(name="profile_loc")
     private String profileLoc;
 
     @Column(name="linkedin_loc")
     private String linkedIn;
+
+
 }

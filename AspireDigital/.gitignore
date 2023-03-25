@@ -1,6 +1,14 @@
 HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
+
+### Service Wrapper  ###
+ad-application.err.log
+ad-application.err.log.old
+ad-application.exe
+ad-application.out.log
+ad-application.out.log.old
+ad-application.wrapper.log
+ad-application.xml
+
 !**/src/main/**/target/
 !**/src/test/**/target/
 
