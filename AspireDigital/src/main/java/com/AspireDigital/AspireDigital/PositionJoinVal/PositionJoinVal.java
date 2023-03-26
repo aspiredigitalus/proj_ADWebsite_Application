@@ -17,7 +17,7 @@ public class PositionJoinVal {
     private int id;
 
     @Column(name="employee_id")
-    private int employeeID;
+    private int employeeId;
 
     @Column(name="position_id")
     private int positionId;
