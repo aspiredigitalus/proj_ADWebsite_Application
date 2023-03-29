@@ -11,9 +11,8 @@ jobs:
     - name: Deploy Stage
       uses: fjogeleit/http-request-action@v1
       with:
-        url: 'http://aspiredigital.asuscomm.com:8085/api/deploy'
+        url: 'http://aspiredigital.asuscomm.com:8085/api/deploy?batpath=C:/Users/Administrator/Desktop/ad-application/deploy.bat'
         method: 'GET'
-        data: '{"batpath": "C:/Users/Administrator/Desktop/ad-application/deploy.bat"}'
     - name: Show Response
       run: |
         echo ${{ steps.myRequest.outputs.response }}
