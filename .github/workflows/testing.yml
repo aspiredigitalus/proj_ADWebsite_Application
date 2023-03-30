@@ -18,4 +18,6 @@ jobs:
         timeout: 20000
     - name: Show Response
       run: |
-        echo ${{ steps.myRequest.outputs.response }}
+        echo ${{ steps.APIResponse.outputs.headers }}
+        echo ${{ steps.APIResponse.outputs.response }}
+        
