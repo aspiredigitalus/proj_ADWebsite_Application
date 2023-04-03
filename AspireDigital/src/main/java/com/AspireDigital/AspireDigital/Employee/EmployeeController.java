@@ -22,6 +22,7 @@ public class EmployeeController {
     public Optional<Employee> getEmployee(@RequestParam Integer employee_id){
         return repo.findById(employee_id);
     }
+
     @GetMapping("/employee/region")
     public List<Employee> getEmployeesByRegion(@RequestParam String region){
         return repo.getEmployeesByRegion(region);
