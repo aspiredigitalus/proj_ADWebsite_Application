@@ -33,5 +33,23 @@ public class EmployeeController {
     public List<Employee> getEmployees(){return repo.findAll();}
 
     @PostMapping
-    public Employee addEmployee(@RequestBody Employee employee) {return repo.save(employee);}
+    public Employee addEmployee(
+            @RequestBody String fname,
+            @RequestBody String mInit,
+            @RequestBody String lName,
+            @RequestBody String region,
+            @RequestBody String profileLoc,
+            @RequestBody String linkedIn) {
+
+        Employee employee = new Employee();
+
+        employee.setFirstName(fname);
+        employee.setMiddleInit(mInit);
+        employee.setLastName(lName);
+        employee.setRegion(region);
+        employee.setProfileLoc(profileLoc);
+        employee.setLinkedIn(linkedIn);
+
+        return repo.save(employee);
+    }
 }
