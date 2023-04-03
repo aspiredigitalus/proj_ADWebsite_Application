@@ -33,8 +33,14 @@ public class EmployeeController {
     public List<Employee> getEmployees(){return repo.findAll();}
 
     @PostMapping
-    public Employee addEmployee(@RequestBody Employee employee) {
-/*
+    public Employee addEmployee(
+            @RequestParam String fname,
+            @RequestParam String mInit,
+            @RequestParam String lName,
+            @RequestParam String region,
+            @RequestParam String profileLoc,
+            @RequestParam String linkedIn) {
+
         Employee employee = new Employee();
 
         employee.setFirstName(fname);
@@ -43,7 +49,7 @@ public class EmployeeController {
         employee.setRegion(region);
         employee.setProfileLoc(profileLoc);
         employee.setLinkedIn(linkedIn);
-*/
+
         return repo.save(employee);
     }
 }
