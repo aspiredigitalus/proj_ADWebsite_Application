@@ -24,7 +24,7 @@ public class EmployeeController {
     }
     @GetMapping("/employee/region")
     public List<Employee> getEmployeesByRegion(@RequestParam String region){
-        return repo.findByRegion(region);
+        return repo.getEmployeesByRegion(region);
     }
 
     @GetMapping("/employee/all")

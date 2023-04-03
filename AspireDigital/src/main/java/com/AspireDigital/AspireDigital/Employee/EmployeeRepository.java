@@ -10,6 +10,6 @@ import java.util.List;
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 //testing
     @Query(value="SELECT * FROM employee WHERE  active = 1 AND region= :region ORDER BY last_name asc", nativeQuery = true)
-    List<Employee> findByRegion(String region);
+    List<Employee> getEmployeesByRegion(String region);
 
 }
