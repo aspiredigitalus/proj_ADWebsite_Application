@@ -31,5 +31,5 @@ public class EmployeeController {
     public List<Employee> getEmployees(){return repo.findAll();}
 
     @PostMapping("/employee")
-    public Employee addEmployee(@RequestBody Employee employee) {return (Employee) repo.save(employee);}
+    public Employee addEmployee(@RequestBody Employee employee) {return repo.save(employee);}
 }

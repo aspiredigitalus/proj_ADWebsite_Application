@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 //testing
-    @Query(value="SELECT * FROM employee WHERE  active = true AND region= :region ORDER BY last_name asc", nativeQuery = true)
+    @Query(value="SELECT * FROM employee WHERE  active = 1 AND region= :region ORDER BY last_name asc", nativeQuery = true)
     List<Employee> getEmployeesByRegion(String region);
 
 }

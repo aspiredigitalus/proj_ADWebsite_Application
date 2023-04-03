@@ -38,7 +38,7 @@ public class Employee {
     @Column(name="linkedin_loc")
     private String linkedIn;
 
-    @Column(name="active")
+    @Column(name="active", columnDefinition="BIT")
     private Boolean active;
 
 
