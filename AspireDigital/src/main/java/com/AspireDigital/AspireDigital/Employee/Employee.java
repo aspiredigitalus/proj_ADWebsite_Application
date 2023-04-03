@@ -40,7 +40,8 @@ public class Employee {
     @Column(name="linkedin_loc")
     private String linkedIn;
 
-
+    @Column(name="active")
+    private Boolean active;
 
     @Column(name="date_created")
     private Date dateCreated;
