@@ -34,7 +34,7 @@ public class EmployeeController {
 
     @PostMapping
     public Employee addEmployee(
-            @RequestParam String fname,
+            @RequestParam String fName,
             @RequestParam(required = false) String mInit,
             @RequestParam String lName,
             @RequestParam String region,
@@ -43,7 +43,7 @@ public class EmployeeController {
 
         Employee employee = new Employee();
 
-        employee.setFirstName(fname);
+        employee.setFirstName(fName);
         employee.setMiddleInit(mInit);
         employee.setLastName(lName);
         employee.setRegion(region);
