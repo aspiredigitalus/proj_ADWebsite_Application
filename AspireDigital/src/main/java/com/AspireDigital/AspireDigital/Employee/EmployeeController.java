@@ -35,11 +35,11 @@ public class EmployeeController {
     @PostMapping
     public Employee addEmployee(
             @RequestParam String fname,
-            @RequestParam String mInit,
+            @RequestParam(required = false) String mInit,
             @RequestParam String lName,
             @RequestParam String region,
-            @RequestParam String profileLoc,
-            @RequestParam String linkedIn) {
+            @RequestParam(required = false) String profileLoc,
+            @RequestParam(required = false) String linkedIn) {
 
         Employee employee = new Employee();
 
