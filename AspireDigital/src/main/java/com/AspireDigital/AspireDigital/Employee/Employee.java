@@ -41,10 +41,10 @@ public class Employee {
     private String linkedIn;
 
     @Column(name="active")
-    private Boolean active;
+    private Boolean active = true;
 
     @Column(name="date_created")
-    private Date dateCreated;
+    private Date dateCreated = new Date();
 
     @Column(name="date_deactivated")
     private Date dateDeactivated;

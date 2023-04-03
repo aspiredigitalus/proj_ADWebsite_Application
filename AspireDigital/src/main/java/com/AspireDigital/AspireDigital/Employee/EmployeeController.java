@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
+@RequestMapping("api/employee")
 public class EmployeeController {
 
     @Autowired
@@ -18,19 +19,19 @@ public class EmployeeController {
     //constructor
     EmployeeController(EmployeeRepository repo) { this.repo = repo; }
 
-    @GetMapping("/employee")
+    @GetMapping
     public Optional<Employee> getEmployee(@RequestParam Integer employee_id){
         return repo.findById(employee_id);
     }
 
-    @GetMapping("/employee/region")
+    @GetMapping("/region")
     public List<Employee> getEmployeesByRegion(@RequestParam String region){
         return repo.getEmployeesByRegion(region);
     }
 
-    @GetMapping("/employee/all")
+    @GetMapping("/all")
     public List<Employee> getEmployees(){return repo.findAll();}
 
-    @PostMapping("/employee")
+    @PostMapping
     public Employee addEmployee(@RequestBody Employee employee) {return repo.save(employee);}
 }
