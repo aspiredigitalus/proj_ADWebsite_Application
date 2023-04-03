@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.AspireDigital.AspireDigital.AspireDigitalApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.91 s - in com.AspireDigital.AspireDigital.AspireDigitalApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 25.798 s - in com.AspireDigital.AspireDigital.AspireDigitalApplicationTests
