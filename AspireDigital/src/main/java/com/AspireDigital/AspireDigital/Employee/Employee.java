@@ -1,13 +1,12 @@
 package com.AspireDigital.AspireDigital.Employee;
-import  jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+import java.util.Date;
 
 @Entity
 @Table
@@ -16,8 +15,10 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Employee {
+
     @Id
     @Column(name="id")
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int id;
 
     @Column(name="first_name")
@@ -37,6 +38,21 @@ public class Employee {
 
     @Column(name="linkedin_loc")
     private String linkedIn;
+
+    @Column(name="active")
+    private Boolean active = true;
+
+    @Column(name="date_created")
+    private Date dateCreated = new Date();
+
+    @Column(name="date_deactivated")
+    private Date dateDeactivated;
+
+    @Column(name="created_by")
+    private String createdBy;
+
+    @Column(name="deactivated_by")
+    private String deactivatedBy;
 
 
 }

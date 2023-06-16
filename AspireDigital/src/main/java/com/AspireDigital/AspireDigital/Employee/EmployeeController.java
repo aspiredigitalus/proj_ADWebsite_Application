@@ -10,6 +10,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
+@RequestMapping("api/employee")
 public class EmployeeController {
 
     @Autowired
@@ -18,18 +19,37 @@ public class EmployeeController {
     //constructor
     EmployeeController(EmployeeRepository repo) { this.repo = repo; }
 
-    @GetMapping("/employee")
+    @GetMapping
     public Optional<Employee> getEmployee(@RequestParam Integer employee_id){
         return repo.findById(employee_id);
     }
-    @GetMapping("/employee/region")
+
+    @GetMapping("/region")
     public List<Employee> getEmployeesByRegion(@RequestParam String region){
-        return repo.findByRegion(region);
+        return repo.getEmployeesByRegion(region);
     }
 
-    @GetMapping("/employee/all")
+    @GetMapping("/all")
     public List<Employee> getEmployees(){return repo.findAll();}
 
-    @PostMapping("/employee")
-    public Employee addEmployee(@RequestBody Employee employee) {return (Employee) repo.save(employee);}
+    @PostMapping
+    public Employee addEmployee(
+            @RequestParam String fName,
+            @RequestParam(required = false) String mInit,
+            @RequestParam String lName,
+            @RequestParam String region,
+            @RequestParam(required = false) String profileLoc,
+            @RequestParam(required = false) String linkedIn) {
+
+        Employee employee = new Employee();
+
+        employee.setFirstName(fName);
+        employee.setMiddleInit(mInit);
+        employee.setLastName(lName);
+        employee.setRegion(region);
+        employee.setProfileLoc(profileLoc);
+        employee.setLinkedIn(linkedIn);
+
+        return repo.save(employee);
+    }
 }
