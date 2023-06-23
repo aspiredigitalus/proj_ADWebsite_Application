@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/aspiredigital/proj_ADWebsite_Application/
-    - /bin/cp /home/aspiredigital/repositories/proj_ADWebsite_Application/AspireDigital/target/* $DEPLOYPATH
+    - /bin/cp /home/aspiredigital/repositories/proj_ADWebsite_Application/AspireDigital/target/*.jar $DEPLOYPATH
