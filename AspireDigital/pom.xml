@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.AspireDigital</groupId>
-	<artifactId>AspireDigital</artifactId>
+	<artifactId>ADapp</artifactId>
 	<version>0.0.1</version>
-	<name>AspireDigital</name>
+	<name>ADapp</name>
 	<description>Application Layer for Apsire Digital Website</description>
 	<properties>
 		<java.version>19</java.version>
